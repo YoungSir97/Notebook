@@ -1,0 +1,34 @@
+Task 1:
+task1.clean.fq.gz
+这是Illumina测序数据的一个例子，以fastq格式存储。
+任务是：	1）网上查找资料了解fastq格式；
+	2）统计一下这批数据产量（即总共产生了多少reads和多少碱基）；
+	3）统计一下这批数据中A、T、C、G的总个数分别是多少。
+Fastq format:  ＃学习一下fastq格式，这是测序数据最常用的存储格式。http://en.wikipedia.org/wiki/FASTQ_format
+
+Task 2:
+Dmel.genome.fa.gz
+这是一种学名叫Drosophila melanogaster的果蝇的基因组序列，以fasta格式存储。
+任务是：	1）网上查找资料了解fasta格式；
+	2）计算基因组中每条scaffold的长度，输出格式为第一列是scaffold ID，第二列为该scaffold长度；
+	3）统计该种果蝇的基因组大小是多少Mb;
+	4）计算该基因组的CG含量;
+	5）统计该基因组中酶切位点TATGGCAGCAG的数量。
+
+Task 3:
+Dmel.all.gff
+这是Drosophila melanogaster 果蝇的蛋白编码基因的注释文件，以Gff3格式存储。
+任务是：	1）网上查找资料了解Gff3格式；
+	2）统计该果蝇的基因总个数；
+	3）计算每一个基因的CDS的总长，输出格式为第一列是基因ID，第二列是该基因的CDS总长度。
+
+Task 4:
+背景：真核生物的基因包括了外显子和内含子，但转录成RNA后，内含子往往会被切除，所有外显子的序列首尾相接，形成能够编码蛋白质的成熟mRNA序列。然而，一条完整的mRNA序列，并不是全部序列都能翻译成蛋白质，只有中间的CDS区(也叫Open reading frame、Protein coding region)才能翻译，CDS区两侧分别是5'UTR和3'UTR。真核基因的结构以及对应的mRNA结构，可以参考以下两个链接中的示意图：
+https://en.wikipedia.org/wiki/Gene    ＃Structure and function部分的第一个图。思考题：5'UTR、3'UTR、CDS跟exon的关系是什么。
+https://en.wikipedia.org/wiki/Messenger_RNA    ＃Structure部分的图。思考题：5'Cap和3'Poly-A tail 是不是由基因组编码的。
+而我们平常做基因注释，往往只能把每个基因的CDS区给注释出来(见Dmel.all.gff文件出现的大量CDS标签)。所以，只要把每个基因的CDS序列提取出来，然后首尾相接，即可用于翻译成蛋白质的序列。
+Dmel.genome.fa.gz (Task2)、Dmel.all.gff (Task3)
+任务：根据Drosophila melanogaster果蝇的基因组fasta文件以及配套的基因注释gff文件，
+	1)获取每个基因去除内含子后的CDS序列，以fasta格式输出；
+	2)根据已知的密码子表，把CDS翻译成蛋白质序列，以fasta格式输出。
+
