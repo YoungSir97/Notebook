@@ -69,7 +69,7 @@ BiocManager::install("RDAVIDWebService")
 
 > 集群上可以设置R lib的环境变量。此时，R会先调用设定的lib里的包，再调用R安装目录下的lib。
 >
-> `export R_LIBS_USER=/hwfssz1/ST_AGRIC/USER/fangdongming/project/yangshuai/software/bin/R/R-4.0.2/library`<img src="file:///C:/Users/YANGSH~1/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg" alt="img" style="zoom: 50%;" />
+> `export R_LIBS_USER=/hwfssz1/ST_AGRIC/USER/fangdongming/project/yangshuai/software/bin/R/R-4.0.2/library`
 
  
 
